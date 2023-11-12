@@ -1,0 +1,373 @@
+:root {
+    --color-bg: #1f1f38; 
+    --color-bg-variant: #2c2c6c;
+    --color-primary: #4db5ff;
+    --color-primary-variant: rgba(77, 181, 255, 0.4);
+    --color-white: #fff;
+    --color-secondary: #FF0000;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --transition: all 400ms ease ;
+    --color-yellow: #0EF700;
+    --color-green: #335B39;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+     --container-width-sm: 90%;
+}
+
+.myprofile__image {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  border: 10px double red;
+  border-radius: 50%;
+  padding: 10px;
+  animation: colorAnimation 6s linear infinite;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", "Roboto", "Poppins", "Lato", "Oswald",
+    "Playfair Display", "Raleway", "Open Sans", "Nunito", "Josefin Sans",
+    "Helvetica", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@keyframes colorAnimation {
+  0% {
+    color: red;
+    border-color: red;
+  }
+  14.28% {
+    color: orange;
+    border-color: orange;
+  }
+  28.57% {
+    color: yellow;
+    border-color: yellow;
+  }
+  42.85% {
+    color: green;
+    border-color: green;
+  }
+  57.14% {
+    color: blue;
+    border-color: blue;
+  }
+  71.42% {
+    color: indigo;
+    border-color: indigo;
+  }
+  85.71% {
+    color: violet;
+    border-color: violet;
+  }
+  100% {
+    color: red;
+    border-color: red;
+  }
+}
+
+
+.myprofile__container {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  border: 10px double red;
+  border-radius: 50%;
+  padding: 10px;
+  animation: colorAnimation 6s linear infinite;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", "Roboto", "Poppins", "Lato", "Oswald",
+    "Playfair Display", "Raleway", "Open Sans", "Nunito", "Josefin Sans",
+    "Helvetica", sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+ @keyframes colorAnimation {
+  0% {
+    color: red;
+    border-color: red;
+  }
+  14.28% {
+    color: orange;
+    border-color: orange;
+  }
+  28.57% {
+    color: yellow;
+    border-color: yellow;
+  }
+  42.85% {
+    color: green;
+    border-color: green;
+  }
+  57.14% {
+    color: blue;
+    border-color: blue;
+  }
+  71.42% {
+    color: indigo;
+    border-color: indigo;
+  }
+  85.71% {
+    color: violet;
+    border-color: violet;
+  }
+  100% {
+    color: red;
+    border-color: red;
+  }
+}
+
+
+
+.myprofile__image:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+ .myprofile__image {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: absolute;
+  top: 0; 
+  left: 10px;
+  background: var(--color-primary);
+  padding:0.1rem;
+  border-radius: 50%; 
+  display: block;
+  align-items: center;
+  margin:  auto ;
+  } 
+
+.myprofile__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.myprofile__image--circle {
+  border-radius: 50%;
+}
+
+
+
+
+
+header {
+    height: 100vh;
+    padding-top: 7rem;
+   
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+}
+#textContainer {
+  position: relative;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#textContainer::before {
+  content: "";
+  background-color: var(--color-primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: blink 1s step-end infinite, rotate 5s linear infinite;
+}
+
+#textContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-green);
+  z-index: -1;
+  /* animation: blink 7s step-end infinite; */
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+    background-color: var(--color-primary);
+  }
+  25%, 75% {
+    opacity: 0;
+    background-color: var(--color-secondary);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================end of text simulation======== */
+
+
+/*=========CTA===========*/
+.cta {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+}
+
+/*=========Header Socials===========*/
+
+.header__socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+}
+
+.header__socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+
+/*=========ME===========*/
+ .me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 18rem;
+    height: 27rem;
+    position: absolute;
+    left: calc(50% - 11rem);
+    margin-top: 4rem;
+    border-radius: 12rem 12rem 0 0;
+   overflow: hidden;
+   padding: 0.2rem 1.5rem 1.5rem 1.5rem;
+   } 
+  
+ /*=========SCROLL DOWN===========*/
+  .scroll__down {
+    position: absolute;
+    right: -2.3rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+
+   /*=======Media queries(for medium devices)======*/
+   @media screen and (max-width:1024px) {
+header {
+    height: 68vh;
+
+}
+   }
+
+
+    /* =======Media queries(for small devices)====== */
+      @media screen and (max-width:600px) {
+    header {
+        height: 100vh;
+       
+    }
+    .header__socials, .scroll__down {
+        display: none;
+    }
+     }
+
+
+
+
+
+     /* =========the new design for all media query size responsive === */
+     /* Extra Small Devices (portrait phones) */
+     @media only screen and (max-width: 576px) {
+      header {
+        height: 140vh;
+    
+    }
+      .container {
+        padding: 10px;
+      }
+    
+      .myprofile__container {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+    
+      .myprofile__image {
+        margin-top: 10px;
+        width: 60px; /* Adjust the width as needed */
+        height: 100px; /* Adjust the height as needed */
+      }
+    
+      h4 {
+        font-size: 18px; /* Adjust the font size as needed */
+      }
+    
+      h1 {
+        font-size: 28px; /* Adjust the font size as needed */
+      }
+    
+      #textContainer {
+        text-align: center;
+      }
+    
+      .text-light {
+        font-size: 20px;
+        padding: 0 20px;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        font-style: italic;
+      }
+    
+      .me img {
+        max-width: 100%;
+        height: 96%;
+        margin-bottom: 20px; 
+      }
+     
+      
+    
+    
+      .scroll__down {
+        font-size: 16px;
+        margin-top: 10px;
+      } 
+    
+      /* Add the following CSS for the below content */
+      .below-content {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    
